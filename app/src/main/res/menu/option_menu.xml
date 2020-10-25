@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+    android:icon="@android:drawable/stat_notify_sync"
+    android:title="refresh contact list"
+    app:showAsAction="always|collapseActionView"
+    android:id="@+id/refreshContact"/>
+    <item android:title="Toggle Airplane Mode"
+        android:orderInCategory="8"
+        app:showAsAction="always|collapseActionView"
+        android:id="@+id/toggleAirplaneMode"
+        android:icon="@drawable/ic_airplane_off"
+        />
+    <item android:title="exit" android:id="@+id/exitApp"
+        android:orderInCategory="10" android:onClick="exitApp"/>
+
+</menu>
