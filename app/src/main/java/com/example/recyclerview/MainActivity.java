@@ -82,12 +82,24 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(this, "Toggled Airplane mode", Toast.LENGTH_LONG).show();
                 break;
             case R.id.exitApp:
-                Toast.makeText(this, "App will be exitted", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "App will be exited", Toast.LENGTH_LONG).show();
                 break;
             case R.id.refreshContact:
                 Toast.makeText(this, "contact list updated", Toast.LENGTH_LONG).show();
                 break;
-
+            case R.id.switchContacts: {
+                String itemText = item.getTitle().toString();
+                if(itemText == "Hide Contacts") {
+                    item.setTitle("Show Contacts");
+                    setContentView(R.layout.airplane_mode_on);
+                    break;
+                } else {
+                    item.setTitle("Hide Contacts");
+                    setContentView(R.layout.activity_main);
+                    Contacts contact = new Contacts(this);
+                }
+                break;
+            }
         }
         return true;
     }
